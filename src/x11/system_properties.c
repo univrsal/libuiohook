@@ -126,7 +126,7 @@ UIOHOOK_API screen_data* hook_create_screen_info(unsigned char *count) {
     screen_data *screens = NULL;
 
     #if defined(USE_XINERAMA) && !defined(USE_XRANDR)
-    if (XineramaIsActive(properties_disp)) {
+    if (properties_disp && XineramaIsActive(properties_disp)) {
         int xine_count = 0;
         XineramaScreenInfo *xine_info = XineramaQueryScreens(properties_disp, &xine_count);
 
