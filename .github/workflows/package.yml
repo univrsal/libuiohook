@@ -28,7 +28,7 @@ jobs:
             -G "Unix Makefiles" \
             -DCMAKE_TOOLCHAIN_FILE=${{github.workspace}}/cmake/toolchain/${{matrix.target}}.cmake \
             -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/dist/${{matrix.target}} \
-            -DCMAKE_VERBOSE_MAKEFILE=true -DENABLE_DEMO=ON -DENABLE_STATIC=ON -DENABLE_SHARED=ON
+            -DCMAKE_VERBOSE_MAKEFILE=true -DUIOHOOK_ENABLE_DEMO=ON -DUIOHOOK_ENABLE_STATIC=ON -DUIOHOOK_ENABLE_SHARED=ON
 
           cmake --build ${{github.workspace}}/build/${{matrix.target}} \
             --parallel 2 \
@@ -151,7 +151,7 @@ jobs:
             -G "Unix Makefiles" \
             -DCMAKE_TOOLCHAIN_FILE=${{github.workspace}}/cmake/toolchain/${{matrix.target}}.cmake \
             -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/dist/${{matrix.target}} \
-            -DCMAKE_VERBOSE_MAKEFILE=true -DENABLE_DEMO=ON -DENABLE_STATIC=ON -DENABLE_SHARED=ON
+            -DCMAKE_VERBOSE_MAKEFILE=true -DUIOHOOK_ENABLE_DEMO=ON -DUIOHOOK_ENABLE_STATIC=ON -DUIOHOOK_ENABLE_SHARED=ON
 
           cmake --build ${{github.workspace}}/build/${{matrix.target}} \
             --parallel 2 \
@@ -201,7 +201,7 @@ jobs:
           -G "Ninja" `
           -DCMAKE_TOOLCHAIN_FILE=${{github.workspace}}\cmake\toolchain\${{matrix.target}}.cmake `
           -DCMAKE_INSTALL_PREFIX=${{github.workspace}}\dist\${{matrix.target}} `
-          -DCMAKE_VERBOSE_MAKEFILE=true -DENABLE_DEMO=ON -DENABLE_STATIC=ON -DENABLE_SHARED=ON
+          -DCMAKE_VERBOSE_MAKEFILE=true -DUIOHOOK_ENABLE_DEMO=ON -DUIOHOOK_ENABLE_STATIC=ON -DUIOHOOK_ENABLE_SHARED=ON
 
           cmake --build ${{github.workspace}}\build\${{matrix.target}} `
           --parallel 2 `
