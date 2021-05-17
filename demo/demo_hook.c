@@ -91,7 +91,7 @@ void dispatch_proc(uiohook_event * const event) {
             }
         case EVENT_KEY_RELEASED:
             snprintf(buffer + length, sizeof(buffer) - length, 
-                ",keycode=%u,rawcode=0x%X",
+                ",keycode=0x%X,rawcode=0x%X",
                 event->data.keyboard.keycode, event->data.keyboard.rawcode);
             break;
 
